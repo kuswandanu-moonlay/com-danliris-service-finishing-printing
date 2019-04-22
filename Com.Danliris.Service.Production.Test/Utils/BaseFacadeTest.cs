@@ -101,7 +101,7 @@ namespace Com.Danliris.Service.Finishing.Printing.Test.Utils
 
             var Response = facade.Read(1, 25, "{}", new List<string>(), "", "{}");
 
-            Assert.Empty(Response.Data);
+            Assert.NotEmpty(Response.Data);
         }
 
         [Fact]
