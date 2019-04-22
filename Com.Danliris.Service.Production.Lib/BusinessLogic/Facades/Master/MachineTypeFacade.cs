@@ -25,7 +25,7 @@ namespace Com.Danliris.Service.Finishing.Printing.Lib.BusinessLogic.Facades.Mast
         {
             this.DbContext = dbContext;
             this.DbSet = DbContext.Set<MachineTypeModel>();
-            this.MachineTypeLogic = serviceProvider.GetService<MachineTypeLogic>();
+            this.MachineTypeLogic = (MachineTypeLogic)serviceProvider.GetService(typeof(MachineTypeLogic));
         }
 
         public async Task<int> CreateAsync(MachineTypeModel model)
